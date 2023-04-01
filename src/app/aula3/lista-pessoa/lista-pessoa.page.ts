@@ -14,13 +14,43 @@ export class ListaPessoaPage implements OnInit {
   ngOnInit() {
   }
 
+  sortString(a: string, b: string){
+    let x = a.toLowerCase();
+    let y = b.toLowerCase();
+    if(x<y){return -1;}
+    if(x>y){return 1;}
+    return 0;
+  }
+
   ionViewWillEnter(){
     const aux:any = localStorage.getItem('pacientes')
     this.lista = JSON.parse(aux)
+    this.lista.sort((a: any,b:any) => this.sortString(a.nome, b.nome));
+    console.log('lista pacientes');
   }
 
   exibeCadastro(){
-    this.nav.navigateForward('form-cadastro')
+    localStorage.setItem('pessoa', 'criar');
+    this.nav.navigateForward('form-cadastro');
+  }
+
+  detalhe(item: any){
+    const aux = JSON.stringify(item);
+    localStorage.setItem('pessoa', aux);
+    console.log('origem');
+    this.nav.navigateForward('detalhe-cadastro')
+  }
+
+  editar(item: any){
+    const aux = JSON.stringify(item);
+    localStorage.setItem('pacientes', aux);
+    this.nav.navigateForward('form-cadastro-pessoa')
+
+  }
+
+  deletar(item: any){
+    this.lista = this.lista.filter((el: any) => el != item)
+    localStorage.setItem('pacientes', JSON.stringify(this.lista))
   }
 
   lista = [

@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Detalhes do Pacientes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-list>
+    <ion-list-header>
+      Clinica teste caio
+    </ion-list-header>
+
+    <ion-item>
+      <ion-text>
+        <p>Nome do Paciente</p>
+        <h2>{{ pessoa.nome }}</h2>
+      </ion-text>
+    </ion-item>
+
+    <ion-item>
+      <ion-text>
+        <p>Genero</p>
+        <h2>{{ pessoa.genero }}</h2>
+      </ion-text>
+    </ion-item>
+
+    <ion-item>
+      <ion-text>
+        <p>Idade</p>
+        <h2>{{ pessoa.idade }}</h2>
+      </ion-text>
+    </ion-item>
+
+  </ion-list>
+</ion-content>
