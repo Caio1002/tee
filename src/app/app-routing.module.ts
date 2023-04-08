@@ -34,7 +34,8 @@ const routes: Routes = [
   {
     path: 'pessoa',
     loadChildren: () => import('./aula3/lista-pessoa/lista-pessoa.module').then( m => m.ListaPessoaPageModule)
-  },
+  }
+
 ];
 
 @NgModule({

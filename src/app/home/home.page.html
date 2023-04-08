@@ -1,18 +1,18 @@
 <ion-content [fullscreen]="true">
   <ion-menu contentId="main-content">
     <ion-header>
-      <ion-toolbar>
-        <ion-title>O Alê é lindo</ion-title>
+      <ion-toolbar color="warning">
+        <ion-title>Clinica Pediátrica</ion-title>
       </ion-toolbar>
     </ion-header>
   </ion-menu>
   <div class="ion-page" id="main-content">
     <ion-header>
-      <ion-toolbar>
+      <ion-toolbar color="warning">
         <ion-buttons slot="start">
           <ion-menu-button></ion-menu-button>
         </ion-buttons>
-        <ion-title>Eu sou Lindo</ion-title>
+        <ion-title>Home</ion-title>
       </ion-toolbar>
     </ion-header>
     <ion-content class="ion-padding">
@@ -30,7 +30,29 @@
       </ion-item>
     </div>
     <div>
-      <ion-button fill="solid" >Começar</ion-button>
+      <ion-button color="tertiary">Começar</ion-button>
     </div>
   </div>
+
+  <ion-tabs>  
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button tab="home">
+        <ion-icon name="play-circle"></ion-icon>
+        Listen Now
+      </ion-tab-button>
+      <ion-tab-button tab="radio">
+        <ion-icon name="radio"></ion-icon>
+        Radio
+      </ion-tab-button>
+      <ion-tab-button tab="library">
+        <ion-icon name="library"></ion-icon>
+        Library
+      </ion-tab-button>
+      <ion-tab-button tab="search">
+        <ion-icon name="search"></ion-icon>
+        Search
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+
 </ion-content>
