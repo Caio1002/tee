@@ -1,20 +1,42 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>Lista</ion-title>
+  <ion-toolbar color="warning">
+    <ion-title>Tela de login</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="ion-padding">
-  <ion-list>
-    <ion-item *ngFor="let item of lista;" >
-      <ion-title>{{item.nome}}</ion-title>
-      <div>
-        <ion-label>Email:{{item.email}}</ion-label>
-      </div>
-     </ion-item>
-  </ion-list>
+
+<ion-content [fullscreen]="true">
+
+  <ion-grid class="grid1">
+    <ion-row class="row1">
+        <ion-col>
+        </ion-col>
+    </ion-row>
+    <ion-row class="row2">
+        <ion-col>
+        </ion-col>
+    </ion-row>
+  </ion-grid>
+  
+  <ion-slide>
+    <div class="contaier-login">
+      <ion-list>
+        <ion-item>
+          <ion-label position="stacked">E-mail:</ion-label>
+          <ion-input placeholder="Digite seu e-mail:"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Senha:</ion-label>
+          <ion-input placeholder="Digite sua senha: " type="password"></ion-input>
+        </ion-item>
+      </ion-list>
+      <ion-row>
+        <ion-col>
+            <ion-button color="tertiary" type="submit" fill="solid" expand="full">
+                Entrar
+            </ion-button>
+        </ion-col>
+    </ion-row>
+  </div>
+  </ion-slide>
 </ion-content>
-
-<ion-footer>
-
-</ion-footer>

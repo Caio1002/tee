@@ -1,14 +1,15 @@
-
-
-<ion-content style="background-color: aquamarine !important; height: 100%;" src="../../../assets/img/wallpaper.jpg" [fullscreen]="true">
-  <img style="width: 100%;" src="../../../assets/img/wallpaper.jpg" alt="">
+<ion-toolbar color="warning">
   <ion-text class="ion-text-center">
-    <h2 style="color: green">Hospício IFSP - Onde a sua saúde mental nunca mais será a mesma!</h2>
+    <h1 style="color: black">Clinica Vida de Criança</h1>
+    <h3>Para cada dorzinha, uma solução carinhosa</h3>
   </ion-text>
+</ion-toolbar>
+<ion-content style="background-color: #ffc409 !important; height: 100%;" src="../../../assets/img/wallpaper-clinica.jpg" [fullscreen]="true">
+  <img style="width: 100%;" src="../../../assets/img/wallpaper-clinica.jpg" alt="">
   <ion-grid>
-    <ion-row>
-      <ion-col><ion-button color="success" style="font-size: 20px;" (click)="move('login')" expand="block">Login</ion-button></ion-col>
-      <ion-col><ion-button color="success" style="font-size: 20px;" (click)="move('register')" expand="block">Register</ion-button></ion-col>
+    <ion-row color="warning">
+      <ion-col><ion-button color="tertiary" style="font-size: 20px;" (click)="move('login')" expand="block">Login</ion-button></ion-col>
+      <ion-col><ion-button color="tertiary" style="font-size: 20px;" (click)="move('register')" expand="block">Cadastrar</ion-button></ion-col>
     </ion-row>
   </ion-grid>
 </ion-content>

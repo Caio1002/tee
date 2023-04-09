@@ -1,12 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: 'home.page.html',
-  styleUrls: ['home.page.scss'],
+  selector: 'app-perfil',
+  templateUrl: './perfil.page.html',
+  styleUrls: ['./perfil.page.scss'],
 })
-export class HomePage {
+export class PerfilPage implements OnInit {
 
   constructor(
     private nav: NavController
