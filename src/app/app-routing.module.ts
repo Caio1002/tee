@@ -13,15 +13,15 @@ const routes: Routes = [
   },
   {
     path: 'login',
-    loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
+    loadChildren: () => import('./aula3/login/login.module').then( m => m.LoginPageModule)
   },
   {
     path: 'register',
-    loadChildren: () => import('./aula2/register/register.module').then( m => m.RegisterPageModule)
+    loadChildren: () => import('./aula3/register/register.module').then( m => m.RegisterPageModule)
   },
   {
     path: 'welcome',
-    loadChildren: () => import('./aula2/welcome/welcome.module').then( m => m.WelcomePageModule)
+    loadChildren: () => import('./welcome/welcome.module').then( m => m.WelcomePageModule)
   },
   {
     path: 'form-cadastro',
@@ -30,13 +30,14 @@ const routes: Routes = [
   {
     path: 'pessoa',
     loadChildren: () => import('./aula3/lista-pessoa/lista-pessoa.module').then( m => m.ListaPessoaPageModule)
-  },  {
+  },
+  {
     path: 'agendamentos',
-    loadChildren: () => import('./agendamentos/agendamentos.module').then( m => m.AgendamentosPageModule)
+    loadChildren: () => import('./home/agendamentos/agendamentos.module').then( m => m.AgendamentosPageModule)
   },
   {
     path: 'perfil',
-    loadChildren: () => import('./perfil/perfil.module').then( m => m.PerfilPageModule)
+    loadChildren: () => import('./home/perfil/perfil.module').then( m => m.PerfilPageModule)
   }
 
 
