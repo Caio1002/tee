@@ -5,20 +5,14 @@
       </ion-toolbar>
     </ion-header>
 
-  <div id="container">
-    <div>
-      <strong>Cadastro</strong>
+    <div id="container">
+      <div>
+        <strong>Home</strong>
+      </div>
+      <div>
+        <ion-button color="tertiary">Consultar</ion-button>
+      </div>
     </div>
-    <div>
-      <ion-item>
-        <ion-label></ion-label>
-        <ion-input placeholder="Seu nome"></ion-input>
-      </ion-item>
-    </div>
-    <div>
-      <ion-button color="tertiary">Começar</ion-button>
-    </div>
-  </div>
 
   <ion-tabs>  
     <ion-tab-bar slot="bottom">
@@ -28,11 +22,11 @@
       </ion-tab-button>
       <ion-tab-button tab="home" (click)="move('home')">
         <ion-icon name="home"></ion-icon>
-        Teste
+        Home
       </ion-tab-button>
-      <ion-tab-button tab="perfil" (click)="move('perfil')">
+      <ion-tab-button tab="perfil" (click)="move('pessoa')">
         <ion-icon name="person"></ion-icon>
-        Perfil
+        Pacientes
       </ion-tab-button>
     </ion-tab-bar>
   </ion-tabs>
