@@ -56,9 +56,14 @@ export class ListaPessoaPage implements OnInit {
   lista = [
     {nome: 'Ana Souza', idade: 19, genero: 'feminino'},
     {nome: 'Pedrovsky', idade: 20, genero: 'não binário'},
-    {nome: 'Cleitin', idade: 34, genero: 'heteroTop'},
+    {nome: 'Cleitin', idade: 34, genero: 'masculino'},
     {nome: 'Amanda', idade: 18, genero: 'feminino'},
-    {nome: 'Vitoria', idade: 20, genero: 'feminino'}
-
+    {nome: 'Vitoria', idade: 20, genero: 'feminino'},
+    {nome: 'Luiza', idade: 32, genero: 'feminino'}
   ]
+
+  move(toPage: string): void {
+    this.nav.navigateForward(toPage);
+  }
+
 }
