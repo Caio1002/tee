@@ -38,7 +38,12 @@ const routes: Routes = [
   {
     path: 'perfil',
     loadChildren: () => import('./home/perfil/perfil.module').then( m => m.PerfilPageModule)
+  },  {
+    path: 'agend-consulta',
+    loadChildren: () => import('./agend-consulta/agend-consulta.module').then( m => m.AgendConsultaPageModule)
   }
+
+
 
 
 ];

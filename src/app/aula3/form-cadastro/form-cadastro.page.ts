@@ -36,4 +36,8 @@ export class FormCadastroPage implements OnInit {
     this.nav.back();
   }
 
+  move(toPage: string): void {
+    this.nav.navigateForward(toPage);
+  }
+
 }
