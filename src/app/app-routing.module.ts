@@ -41,6 +41,14 @@ const routes: Routes = [
   },  {
     path: 'agend-consulta',
     loadChildren: () => import('./agend-consulta/agend-consulta.module').then( m => m.AgendConsultaPageModule)
+  },
+  {
+    path: 'update-pessoa',
+    loadChildren: () => import('./pages/update-pessoa/update-pessoa.module').then( m => m.UpdatePessoaPageModule)
+  },
+  {
+    path: 'lista-produtos',
+    loadChildren: () => import('./aula4/lista-produtos/lista-produtos.module').then( m => m.ListaProdutosPageModule)
   }
 
 

@@ -11,15 +11,15 @@
   <ion-list style="width: 200px;">
     <ion-item>
       <ion-label size="20px" position="stacked">Nome:</ion-label>
-      <ion-input [(ngModel)]="nome" placeholder="Digite seu nome:"></ion-input>
+      <ion-input [(ngModel)]="pessoa.name" placeholder="Digite seu nome:"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label position="stacked">Idade:</ion-label>
-      <ion-input [(ngModel)]="idade" placeholder="Digite sua idade:"></ion-input>
+      <ion-input [(ngModel)]="pessoa.idade" placeholder="Digite sua idade:"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label position="stacked">Genêro</ion-label>
-      <ion-input [(ngModel)]="genero" placeholder="Digite seu Genêro: "></ion-input>
+      <ion-input [(ngModel)]="pessoa.sexo" placeholder="Digite seu Genêro: "></ion-input>
     </ion-item>
     <ion-button (click)="save()" expand="block">Salvar</ion-button>
 

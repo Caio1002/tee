@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
+import { Pessoa } from 'src/app/class/Pessoa';
+import { PessoaService } from 'src/services/pessoa.service';
 
 @Component({
   selector: 'app-form-cadastro',
@@ -9,12 +11,17 @@ import { NavController } from '@ionic/angular';
 export class FormCadastroPage implements OnInit {
 
 
-  nome = ""
-  idade = ""
-  genero = ""
+  pessoa: Pessoa = new Pessoa();
+
   lista = []
 
-  constructor(private nav: NavController) { }
+  constructor(
+    private nav: NavController, 
+    
+    private pessoaService: PessoaService
+    ) {
+
+  }
 
   ngOnInit() {
     const aux:any = localStorage.getItem('pacientes')
@@ -22,15 +29,9 @@ export class FormCadastroPage implements OnInit {
   }
 
   save(){
-    const nome = this.nome;
-    const idade = this.idade;
-    const genero = this.genero;
-    const obj:any = {nome, idade, genero}
-    const data = JSON.stringify(this.lista.concat(obj))
-    this.lista.concat(obj)
-    localStorage.setItem('pacientes', data)
-    this.nav.navigateBack('pessoa');
-}
+    this.pessoaService.save(this.pessoa)
+    this.nav.navigateBack('pessoa')
+  }
 
   back(){
     this.nav.back();

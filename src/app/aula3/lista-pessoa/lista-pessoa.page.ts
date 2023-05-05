@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
+import { PessoaService } from 'src/services/pessoa.service';
 
 @Component({
   selector: 'app-lista-pessoa',
@@ -8,7 +9,10 @@ import { NavController } from '@ionic/angular';
 })
 export class ListaPessoaPage implements OnInit {
 
-  constructor(private nav: NavController) {
+  constructor(
+    private nav: NavController,
+    private pessoaService: PessoaService) {
+    
   }
 
   ngOnInit() {
@@ -23,9 +27,8 @@ export class ListaPessoaPage implements OnInit {
   }
 
   ionViewWillEnter(){
-    const aux:any = localStorage.getItem('pacientes')
+    const aux:any = localStorage.getItem('Pessoa')
     this.lista = JSON.parse(aux)
-    this.lista.sort((a: any,b:any) => this.sortString(a.nome, b.nome));
     console.log('lista pacientes');
   }
 
@@ -41,29 +44,22 @@ export class ListaPessoaPage implements OnInit {
     this.nav.navigateForward('detalhe-cadastro')
   }
 
-  editar(item: any){
-    const aux = JSON.stringify(item);
-    localStorage.setItem('pacientes', aux);
-    this.nav.navigateForward('form-cadastro-pessoa')
-
-  }
-
   deletar(item: any){
     this.lista = this.lista.filter((el: any) => el != item)
-    localStorage.setItem('pacientes', JSON.stringify(this.lista))
+    localStorage.setItem('Pessoa', JSON.stringify(this.lista))
   }
 
   lista = [
-    {nome: 'Ana Souza', idade: 19, genero: 'feminino'},
-    {nome: 'Pedrovsky', idade: 20, genero: 'não binário'},
-    {nome: 'Cleitin', idade: 34, genero: 'masculino'},
-    {nome: 'Amanda', idade: 18, genero: 'feminino'},
-    {nome: 'Vitoria', idade: 20, genero: 'feminino'},
-    {nome: 'Luiza', idade: 32, genero: 'feminino'}
+    {name: '', idade: 0, genero: ''}
   ]
 
   move(toPage: string): void {
     this.nav.navigateForward(toPage);
+  }
+
+  editar(pessoa:{}){
+    this.pessoaService.detailPessoa(pessoa)
+    this.nav.navigateForward('update-pessoa')
   }
 
 }

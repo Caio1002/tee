@@ -7,7 +7,7 @@
 
 <ion-content>
 
-  <ion-fab slot="fixed" vertical="top" horizontal="start">
+  <!-- <ion-fab slot="fixed" vertical="top" horizontal="start">
     <ion-fab-button color="tertiary">
       <ion-icon name="chevron-forward-circle"></ion-icon>
     </ion-fab-button>
@@ -19,13 +19,13 @@
         <ion-icon name="pin"></ion-icon>
       </ion-fab-button>
     </ion-fab-list>
-  </ion-fab>
+  </ion-fab> -->
 
   <ion-list>
     <ion-item-sliding *ngFor="let item of lista">
       <ion-item (click)="detalhe(item)">
         <ion-text>
-          <h3>{{item.nome}}</h3>
+          <h3>{{item.name}}</h3>
           <p>Gênero: {{item.genero}} - {{item.idade}} anos</p>
         </ion-text>
       </ion-item>
@@ -34,11 +34,12 @@
         <ion-item-option (click)="deletar(item)" color="danger">Deletar</ion-item-option>
       </ion-item-options>
     </ion-item-sliding>
+  </ion-list>
+
     <ion-fab slot="fixed" vertical="bottom" horizontal="end">
       <ion-fab-button color="tertiary" size="small" (click)="move('form-cadastro')">
         <ion-icon name="add"></ion-icon>
       </ion-fab-button>
-  </ion-fab>
-  </ion-list>
-
+    </ion-fab>
+    
 </ion-content>
