@@ -50,7 +50,7 @@ export class ListaPessoaPage implements OnInit {
   }
 
   lista = [
-    {name: '', idade: 0, genero: ''}
+    {name: '', idade: 0, sexo: ''}
   ]
 
   move(toPage: string): void {

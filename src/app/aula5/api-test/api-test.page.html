@@ -1,0 +1,25 @@
+<ion-content [fullscreen]="true">
+  <ion-header>
+    <ion-toolbar color="warning">
+      <ion-title>API-teste Nacionalidade</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-list>
+    <ion-list-header>Insira o seu nome</ion-list-header>
+    
+    <ion-item>
+      <ion-label position="floating">Nome</ion-label>
+      <ion-input (keyup)="activ()" [(ngModel)]="user.nome"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Genero</ion-label>
+      <ion-input [(ngModel)]="user.genero"></ion-input>
+    </ion-item>
+
+  </ion-list>
+
+</ion-content>

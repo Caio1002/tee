@@ -38,7 +38,8 @@ const routes: Routes = [
   {
     path: 'perfil',
     loadChildren: () => import('./home/perfil/perfil.module').then( m => m.PerfilPageModule)
-  },  {
+  },
+  {
     path: 'agend-consulta',
     loadChildren: () => import('./agend-consulta/agend-consulta.module').then( m => m.AgendConsultaPageModule)
   },
@@ -53,7 +54,15 @@ const routes: Routes = [
   {
     path: 'cadastro-produto',
     loadChildren: () => import('./aula4/cadastro-produto/cadastro-produto.module').then( m => m.CadastroProdutoPageModule)
+  },  {
+    path: 'endereco',
+    loadChildren: () => import('./aula5/endereco/endereco.module').then( m => m.EnderecoPageModule)
+  },
+  {
+    path: 'api-test',
+    loadChildren: () => import('./aula5/api-test/api-test.module').then( m => m.ApiTestPageModule)
   }
+
 
 
 
