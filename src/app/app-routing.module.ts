@@ -61,6 +61,10 @@ const routes: Routes = [
   {
     path: 'api-test',
     loadChildren: () => import('./aula5/api-test/api-test.module').then( m => m.ApiTestPageModule)
+  },
+  {
+    path: 'alert-sample',
+    loadChildren: () => import('./capacitor/alert-sample/alert-sample.module').then( m => m.AlertSamplePageModule)
   }
 
 
