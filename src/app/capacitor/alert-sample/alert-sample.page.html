@@ -1,5 +1,11 @@
 <ion-content [fullscreen]="true">
-<toolbar [title]="'Alert-Sample'"></toolbar>
+<toolbar 
+  [title]="'Alert-Sample'" 
+  [backButton]="false"
+  [menuButton]="true"
+  (emitter)="toolbarEvent($event)"
+  >
+</toolbar>
 
 <ion-content class="ion-padding">
 

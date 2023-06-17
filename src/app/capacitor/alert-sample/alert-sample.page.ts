@@ -22,7 +22,10 @@ export class AlertSamplePage implements OnInit {
   }
 
   exibeAction(){
+  }
 
+  toolbarEvent(event: any){
+    console.log(event);
   }
 
 }

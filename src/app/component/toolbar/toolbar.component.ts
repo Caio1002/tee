@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'toolbar',
@@ -7,11 +7,19 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ToolbarComponent  implements OnInit {
 
+  @Output() emitter = new EventEmitter();
+
   @Input() title = '';
   @Input() backButton = false;
+  @Input() menuButton = false;
 
   constructor() { }
 
   ngOnInit() {}
+
+  alguemMeClicou(){
+    console.log('Alguém me clicou! ALÁ');
+    this.emitter.emit({item: 'toolbarClick'})
+  }
 
 }
