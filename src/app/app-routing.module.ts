@@ -54,7 +54,8 @@ const routes: Routes = [
   {
     path: 'cadastro-produto',
     loadChildren: () => import('./aula4/cadastro-produto/cadastro-produto.module').then( m => m.CadastroProdutoPageModule)
-  },  {
+  },
+  {
     path: 'endereco',
     loadChildren: () => import('./aula5/endereco/endereco.module').then( m => m.EnderecoPageModule)
   },
@@ -65,6 +66,10 @@ const routes: Routes = [
   {
     path: 'alert-sample',
     loadChildren: () => import('./capacitor/alert-sample/alert-sample.module').then( m => m.AlertSamplePageModule)
+  },
+  { //registra o modulo Auth na aplicação
+    path: 'auth',
+    loadChildren: () => import('./auth/auth.module').then( m => m.AuthModule)
   }
 
 
